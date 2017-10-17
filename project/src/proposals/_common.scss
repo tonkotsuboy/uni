@@ -1,4 +1,5 @@
 @import "fonts";
+@import "mixins";
 
 * {
   margin: 0;
@@ -14,18 +15,15 @@ html, body {
 
 body {
   margin: 0;
-  font-family: $gothic;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include gothicStyle();
   color: #fff;
 }
 
 h1, h2 {
-  font-family: $mincho;
+  @include minchoStyle();
   font-weight: normal;
 }
+
 p {
   font-size: 16px;
 }

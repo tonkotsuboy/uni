@@ -1,0 +1,9 @@
+@import "fonts";
+
+@mixin gothicStyle {
+  font-family: $gothic;
+}
+
+@mixin minchoStyle {
+  font-family: $mincho;
+}

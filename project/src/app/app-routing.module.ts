@@ -6,7 +6,7 @@ import {CatsComponent} from './cats/cats.component';
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: CatsComponent
   },
   {
     path: "home",
