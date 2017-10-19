@@ -5,7 +5,7 @@
 </div>
 <div class="expression">
   <h2 class="lead">{{currentData.lead}}</h2>
-  <p>{{currentData.text}}</p>
+  <p [innerHTML]="currentData.text"></p>
 </div>
 <nav *ngIf="catDataList">
   <app-cat-thumb *ngFor="let detailData of catDataList"
