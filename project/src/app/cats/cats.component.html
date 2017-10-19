@@ -7,7 +7,9 @@
   <h2 class="lead">{{currentData.lead}}</h2>
   <p [innerHTML]="currentData.text"></p>
 </div>
-<nav *ngIf="catDataList">
+<nav
+  class="cat-navigation"
+  *ngIf="catDataList">
   <app-cat-thumb *ngFor="let detailData of catDataList"
                  [detailData]="detailData"
                  (click)="onClickThumb(detailData)"
