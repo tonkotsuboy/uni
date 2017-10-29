@@ -1,18 +1,31 @@
-<div class="main-visual thumb" *ngIf="currentData">
-  <h1 class="title">{{currentData.title}}</h1>
-  <img class="image" src="data/{{currentData.image}}" alt="">
-  <div class="num">{{currentData.num}}</div>
+<div class="main-visual"
+     *ngIf="currentData"
+     [style.background-image]="'url(./data/' + currentData.image + ')'"
+>
 </div>
+<div class="num">{{currentData.num}}</div>
+
 <div class="expression">
   <h2 class="lead">{{currentData.lead}}</h2>
-  <p [innerHTML]="currentData.text"></p>
+  <p class="text" [innerHTML]="currentData.text"></p>
 </div>
-<nav
-  class="cat-navigation"
-  *ngIf="catDataList">
-  <app-cat-thumb *ngFor="let detailData of catDataList"
-                 [detailData]="detailData"
-                 (click)="onClickThumb(detailData)"
-  >
-  </app-cat-thumb>
-</nav>
+
+<div
+  *ngIf="currentData"
+  class="other-photos">
+  <img *ngFor="let otherImage of currentData.other_photos"
+       src="./data/{{otherImage}}"
+       alt="">
+</div>
+<footer class="footer">
+  <address>@tonkotsuboy_com</address>
+</footer>
+
+
+<div class="container">
+  <header>ヘッダー</header>
+  <aside>aside</aside>
+  <main>main</main>
+  <nav>nav</nav>
+  <footer>footer</footer>
+</div>

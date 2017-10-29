@@ -1,12 +1,9 @@
 export interface CatData {
-  data:CatDetailData[];
+  data:CatDetailData;
 }
-
 export interface CatDetailData {
   num:number;
-  title:string;
   lead:string;
-  image:string;
   text:string;
+  other_photos:string[];
 }
-

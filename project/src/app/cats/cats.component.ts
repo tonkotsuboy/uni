@@ -9,20 +9,16 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ["./cats.component.scss"]
 })
 export class CatsComponent implements OnInit {
-
-  public catDataList: CatDetailData[] = [];
-
   public currentData: CatDetailData;
 
   constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
-    this.http.get<CatData>("./data/cat-data.json")
+    this.http.get<CatData>("./data/cat1/cat1.json")
       .subscribe(
-        catDataList => {
-          this.catDataList = catDataList.data;
-          this.currentData = this.catDataList[0];
+        catData => {
+          this.currentData = catData.data;
         }
       );
   }

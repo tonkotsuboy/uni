@@ -6,14 +6,12 @@ import {AppRoutingModule} from "./app-routing.module";
 import {HomeComponent} from "./home/home.component";
 import {CatsComponent} from "./cats/cats.component";
 import {HttpClientModule} from "@angular/common/http";
-import {CatThumbComponent} from "./cats/cat-thumb/cat-thumb.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CatsComponent,
-    CatThumbComponent
+    CatsComponent
   ],
   imports: [
     AppRoutingModule,
